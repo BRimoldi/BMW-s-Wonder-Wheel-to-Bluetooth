@@ -13,7 +13,8 @@ A commercial version with similar functionality is the WunderLINQ X productd by 
 
 ## ⚠️ Disclaimer
 	•	This project is provided "as is" with no guarantees of functionality or compatibility.
-	•	I am not responsible for accidents, injuries, or legal violations resulting from its use. Riding while distracted is dangerous. Always:
+	•	I am not responsible for accidents, injuries, or legal violations resulting from its use. 
+ 		Riding while distracted is dangerous. Always:
 	⁃	Test features in a safe environment first.
 	⁃	Prioritize road safety over interface interactions.
 	⁃	Comply with local laws regarding device use while riding.
