@@ -1,4 +1,4 @@
-# Wonder Wheel to Bluetooth Keystroke Converter
+# BMW's Wonder Wheel to Bluetooth Keystroke Converter
 Control the Scenic navigation app via your BMW motorcycle’s Wonder Wheel. 
 
 ## Project Overview
