@@ -66,7 +66,7 @@ The LIN slave implementation is based on Georg Icking-Konert’s work. I am grat
 (To be added)
 
 ## Demo Video
-(To be added)
+https://youtu.be/-cVcGIMZuJ0
 
 ## Feedback
 Send feedback at WWtoBluetooth@icloud.com
