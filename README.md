@@ -61,7 +61,7 @@ Works with any app supporting Bluetooth keyboard inputs (arrows, ENTER, ESC).
 
 ## Credit
 
-The LIN slave implementation is based on Georg Icking-Konert’s work. I am grateful to him for his interest to this project and for his guidance in getting the LIN slave to work on the Arduino Nano ESP32. 
+The LIN slave implementation is based on [Georg Icking-Konert’s work](https://github.com/gicking/LIN_slave_portable_Arduino). 
 
 ## Installation Instructions
 (To be added)
