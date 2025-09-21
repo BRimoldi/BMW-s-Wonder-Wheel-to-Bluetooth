@@ -69,8 +69,8 @@ The LIN slave implementation is based on [LIN Slave Portable Arduino](https://gi
 ## Installation Instructions
     * Install the Arduino IDE from http://arduino.cc
     * Via IDE Board Manager install "Arduino ESP32 Boards" for Nano ESP32
-    * Download project from https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth
-    * Via Library Manager, Download "ESP32-BLE-Keyboard" from https://github.com/T-vK/ESP32-BLE-Keyboard and move to "~/Arduino/libraries"
+    * Download the Arduino sketch [BMW's Wonder-Wheel-to-Bluetooth](https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth)
+    * Via Library Manager, Download "ESP32-BLE-Keyboard" from (here)[https://github.com/T-vK/ESP32-BLE-Keyboard] and move to "~/Arduino/libraries"
     * Compile for Arduino Nano ESP32
     
 
