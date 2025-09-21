@@ -65,6 +65,7 @@ Works with any app supporting Bluetooth keyboard inputs (arrows, ENTER, ESC).
 ## Credit
 
 The LIN slave implementation is based on [LIN Slave Portable Arduino](https://github.com/gicking/LIN_slave_portable_Arduino)
+The BLE keyboard implementation is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard)
 
 ## Installation Instructions
 * Install the [Arduino IDE](http://arduino.cc)
