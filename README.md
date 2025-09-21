@@ -65,14 +65,16 @@ Works with any app supporting Bluetooth keyboard inputs (arrows, ENTER, ESC).
 ## Credit
 
 The LIN slave implementation is based on [LIN Slave Portable Arduino](https://github.com/gicking/LIN_slave_portable_Arduino)
+
 The BLE keyboard implementation is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard)
 
 ## Installation Instructions
 * Install the [Arduino IDE](http://arduino.cc)
 * Via IDE Board Manager install "Arduino ESP32 Boards" for Nano ESP32
-* Download project from [https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth](https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth)
-* Via Library Manager, Download [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard) and move to `~/Arduino/libraries`
-* Compile for Arduino Nano ESP32
+* From the [project Github](https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth) do the following:
+    *    Download the folders LIN_slave_portable_Arduino and ESP32-BLE-Keyboard and place them inside `~/Arduino/libraries`
+    *    Download the project folder WWToPhoneInterface (and place it anywhere)
+* Compile WWToPhoneInterface.ino for Arduino Nano ESP32
 
 ## Demo Video
 https://www.youtube.com/watch?v=-cVcGIMZuJ0
