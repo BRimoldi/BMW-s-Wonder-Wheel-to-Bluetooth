@@ -40,7 +40,7 @@ The electrical circuit is implemented on a compact 7cm × 3cm PCB.
 
 ## Installation
 
-The device connects to the motorcycle via a 3-wire harness (typically located under the left-side tank cover), providing:
+The device connects to the motorcycle via a 3-pin harness (typically located under the left-side tank cover), providing:
 *   +12V
 *   GND
 *   LIN bus
