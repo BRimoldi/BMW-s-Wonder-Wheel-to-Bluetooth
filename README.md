@@ -27,6 +27,9 @@ A commercial version with similar functionality is the WunderLINQ X product by B
 Core components:
 *   Arduino Nano ESP32 (LIN + Bluetooth)
 *   An NXP TJA1021 LIN transceiver
+*   A diod
+*   Theee capacitors of roughly 220pF, 68nF,10uF
+*   The 3-pin harness to the bike: BMW part 83 30 0 413 585
 
 The electrical circuit is implemented on a compact 7cm × 3cm PCB.
 
