@@ -28,7 +28,7 @@ Core components:
 *   Arduino Nano ESP32 (LIN + Bluetooth)
 *   An NXP TJA1021 LIN transceiver
 *   A diod
-*   Theee capacitors of roughly 220pF, 68nF,10uF
+*   Three capacitors of roughly 220pF, 68nF, 47uF to 100uF
 *   The 3-pin harness to the bike: BMW part 83 30 0 413 585
 
 The electrical circuit is implemented on a compact 7cm × 3cm PCB.
