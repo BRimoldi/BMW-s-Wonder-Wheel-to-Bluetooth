@@ -40,10 +40,11 @@ The electrical circuit is implemented on a compact 7cm × 3cm PCB.
 
 ## Installation
 
-The device connects to the motorcycle via a 3-pin harness (typically located under the left-side tank cover), providing:
+The device connects to the motorcycle via a 3-pin harness (for the M1000R located under the left-side tank cover), providing:
 *   +12V
 *   GND
 *   LIN bus
+Note: I am using the GND and +12V also to feed the Quad Lock Wireless Charging Head.
 
 ## Prerequisites
 
@@ -71,7 +72,7 @@ The LIN slave implementation is based on [LIN Slave Portable Arduino](https://gi
 
 The BLE keyboard implementation is based on [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard)
 
-## Installation Instructions
+## Software Installation Instructions
 * Install the [Arduino IDE](http://arduino.cc)
 * Via IDE Board Manager install "Arduino ESP32 Boards" for Nano ESP32
 * From the [project Github](https://github.com/BRimoldi/BMW-s-Wonder-Wheel-to-Bluetooth) do the following:
