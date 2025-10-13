@@ -44,6 +44,7 @@ The device connects to the motorcycle via a 3-pin harness (for the M1000R locate
 *   +12V
 *   GND
 *   LIN bus
+
 Note: I am using the GND and +12V also to feed the Quad Lock Wireless Charging Head.
 
 ## Prerequisites
