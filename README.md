@@ -4,6 +4,8 @@
 
 Control the Scenic navigation app on an iPhone using the Wonder Wheel on a BMW motorcycle. This edition adds Wi-Fi firmware updates at startup and recognizes long left/right pushes as soon as their threshold is reached.
 
+**`WWToPhoneInterface_V2` supersedes the original `WWToPhoneInterface` firmware**, adding Wi-Fi OTA updates and improved recognition of long Wonder Wheel pushes. The original version remains available for reference.
+
 Developed by **Bixio Rimoldi**. Tested with an **Arduino Nano ESP32** on a **BMW M 1000 R**. Minor modifications may be needed for other BMW models, as the LIN messages corresponding to certain Wonder Wheel gestures can differ between models.
 
 ## Project overview
@@ -74,7 +76,7 @@ The sketch uses the Arduino ESP32 core's `WiFi`, `WebServer`, and `Update` facil
 
 ## Password configuration
 
-Before compiling and uploading the sketch, open `EnhancedWonderWheel/EnhancedWonderWheel.ino` and locate these settings near the beginning:
+Before compiling and uploading the sketch, open `WWToPhoneInterface_V2/WWToPhoneInterface_V2.ino` and locate these settings near the beginning:
 
 ```cpp
 const char* WIFI_SSID = "Motorcycle-OTA";
