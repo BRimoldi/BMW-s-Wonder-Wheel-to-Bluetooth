@@ -1,5 +1,14 @@
 # BMW Wonder Wheel to Bluetooth Keystroke Converter
 
+## Available firmware editions
+
+| Edition | Version | Functionality |
+| --- | --- | --- |
+| [Wonder Wheel Edition](WWToPhoneInterface_V2/) | 2.0 | Scenic navigation via the BMW Wonder Wheel |
+| [Wonder Wheel + Insta360 Edition](BMW_To_PhoneAndInsta360_Control/) | 1.0 | Scenic navigation and Insta360 GO 3S camera control |
+
+Install one firmware edition at a time on the Arduino Nano ESP32. Each edition has its own version number. See the Insta360 edition's folder README for its additional installation and operation instructions.
+
 **Enhanced Wonder Wheel edition — Wi-Fi OTA and improved long-push recognition**
 
 Control the Scenic navigation app on an iPhone using the Wonder Wheel on a BMW motorcycle. This edition adds Wi-Fi firmware updates at startup and recognizes long left/right pushes as soon as their threshold is reached.
