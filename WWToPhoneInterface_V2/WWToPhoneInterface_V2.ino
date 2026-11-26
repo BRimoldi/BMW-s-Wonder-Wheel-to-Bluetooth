@@ -1,20 +1,91 @@
-/*********************
-
-Description: This sketch implements the interface between the BMW Wonder Wheel (WW) and a cell phone (tested on iPhone). 
-  The purpose is to be able to use the WW to zoom in and out of a navigation app (tested on Scenic).
-  The sketch implements a LIN bus slave to interact with the motorcycle, and a Bluetooth keyboard to interact with the phone. 
-  The action of turning the WW up/down by one notch is seen by the phone as pressing the arrow up/down on a bluetooth keyboard. 
-  The action of pushing the  WW right/left is seen by the phone as pressing the arrow right/left.
-  A long right push is seen as a RETURN and a long left push as an ESC.
-  The code has been tested on an Arduino Nano ESP32 board (complemented with a TJA1021 Transceiver). 
-
-Author: Bixio Rimoldi
-Completed: Sept 4, 2025
-
-
-Thanks: The LIN slave part is borrowed from https://github.com/gicking/LIN_slave_portable_Arduino
-
-**********************/
+/*
+ * BMW WONDER WHEEL TO BLUETOOTH KEYBOARD INTERFACE
+ * ------------------------------------------------
+ *
+ * Version: 2.0 - Enhanced Wonder Wheel Edition
+ * Author: Bixio Rimoldi
+ *
+ * Original version completed: September 4, 2025
+ * Version 2.0: November 2026
+ *
+ * Description:
+ *
+ * This sketch implements an interface between the BMW motorcycle
+ * Multi-Function Controller ("Wonder Wheel", WW) and a smartphone,
+ * tested with an iPhone running the Scenic navigation application.
+ *
+ * The Arduino acts as a LIN bus slave connected to the motorcycle
+ * and as a Bluetooth Low Energy (BLE) keyboard connected to the phone.
+ * Wonder Wheel movements are translated into keyboard events:
+ *
+ *   Wheel rotation up/down    -> UP / DOWN arrow
+ *   Short push right/left     -> RIGHT / LEFT arrow
+ *   Long push right           -> RETURN / ENTER
+ *   Long pull left            -> ESCAPE
+ *
+ * Long left/right pushes are recognized after approximately
+ * 10 consecutive LIN frames (~0.5 seconds), without requiring
+ * the rider to release the wheel. A long-push event is emitted
+ * only once per hold; short pushes are emitted on release.
+ *
+ * Wi-Fi OTA firmware updates:
+ *
+ * At startup, the Arduino creates a Wi-Fi access point named
+ * "Motorcycle-OTA" for approximately 60 seconds.
+ * During this period, a compiled firmware image (.bin) can be
+ * uploaded through a password-protected web interface at:
+ *
+ *   http://192.168.4.1
+ *
+ * After the update window expires, Wi-Fi is disabled and the
+ * LIN interface enters normal operation ("Riding mode").
+ * An upload already in progress may finish after the window
+ * expires. A successful update automatically restarts the board.
+ *
+ * Hardware:
+ *
+ *   Arduino Nano ESP32
+ *   NXP TJA1021 LIN transceiver
+ *   BMW motorcycle with navigation-ready LIN interface
+ *
+ * Software dependencies:
+ *
+ *   LIN_slave_portable_Arduino (ESP32 HardwareSerial variant)
+ *   ESP32-BLE-Keyboard
+ *   Arduino ESP32 core (WiFi, WebServer, Update)
+ *
+ * Configuration:
+ *
+ * Before uploading, configure WIFI_SSID, WIFI_PASSWORD,
+ * OTA_USERNAME and OTA_PASSWORD in the sketch.
+ * Do not publish personal credentials.
+ *
+ * Tested configuration:
+ *
+ *   BMW M 1000 R
+ *   Arduino Nano ESP32
+ *   iPhone running Scenic
+ *
+ * Compatibility with other BMW models may require changes
+ * to the LIN message interpretation.
+ *
+ * Acknowledgments:
+ *
+ * LIN slave library:
+ *   https://github.com/gicking/LIN_slave_portable_Arduino
+ *
+ * BLE keyboard library:
+ *   https://github.com/T-vK/ESP32-BLE-Keyboard
+ *
+ * ChatGPT (OpenAI) assisted with firmware development,
+ * debugging and documentation.
+ *
+ * For detailed installation instructions, wiring, OTA update
+ * procedures, operating instructions and safety information,
+ * refer to the project's README.md.
+ *
+ * This project is provided "as is", without warranties.
+ */
 
 // include files
 #include <LIN_slave_HardwareSerial_ESP32.h>
